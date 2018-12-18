@@ -5,7 +5,7 @@ import sys
 import re
 mytxt="a"
 myfile = open(sys.argv[1],'r')
-myregex = re.escape(sys.argv[2])+r'.*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
+myregex = re.escape(sys.argv[2])+r'\s*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
 for eachline in myfile:
 	mytxt += eachline
 mytxt1=re.findall(myregex,mytxt)
